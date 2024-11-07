@@ -1,100 +1,125 @@
-#navbar{
-    background-color: black;
-    
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
 }
-header{
-    position: sticky;
-    top:0%;
-}
-a{
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     color: white;
-    margin: 10px;
 }
 
-#webname{
-    color: rgb(25, 0, 255);
-    margin-left: 10px;
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#search-btn{
-    color:white;
+.nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
-#home{
-    margin-left: 20px;
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
-#para1{
-   margin: 100px 20px 20px 750px;
-   font-size: 20px;
-  
-}
-
-#para2{
-    margin: 150px 20px 20px 20px;
-    font-size: 20px;
-}
-
-#para3{
-    margin: 150px 20px 20px 20px;
-    font-size: 20px;
-}
-
-.about{
-    margin: 20px;
-}
-
-#about1{
-    float: left;
-}
-
-#about2{
- float: right;
- margin: 50px 20px 20px 20px;
-}
-
-#about3{
-    float: left;
-    margin: 0px 20px 20px 20px ;
-}
-
-#mission{
-    margin: 25px 50px 0px 850px;
-    color: rgb(2, 19, 255);
-   
-}
-
-hr{
-    margin: 125px 0px 0px 0px;
-}
-
-#hr{
-    margin:150px 0px 0px 0px;
-}
-
-h1{
-    margin: 20px;
-    color:deeppink;
-}
-
-#footer1{
-    background-color:wheat;
-    margin: 220px 0px 0px 0px;
-    height: 50px;
-    padding: 10px;
-}
-
-p{
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   margin: 0px 0px 0px 50px;
-}
-
-#devloper{
-  margin: 0px 0px 0px 300px;
-}
-
-#sandesh{
-    color: crimson;
-    margin: 0px 0px 0px 5px;
+.hero-title {
+    font-size: 3.5rem;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Section Text */
+.section-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Vision & Mission Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Vision Card */
+.vision-card {
+    background-color: #f2f8ff;
+}
+
+/* Mission Card */
+.mission-card {
+    background-color: #e6f9e6;
+}
+
+/* Core Values Card */
+.values-card {
+    background-color: #fff3e6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
 }

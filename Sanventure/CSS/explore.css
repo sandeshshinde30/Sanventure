@@ -1,124 +1,184 @@
-#navbar{
-    background-color: black;
-    position: sticky;
-    top:0%;
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-header{
-    position:sticky;
-    top:0%;
-}
-a{
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     color: white;
-    margin: 10px;
 }
 
-h2{
-    color: rgb(25, 0, 255);
-    margin-left: 10px;
+.navbar h2 {
+    font-size: 1.5rem;
 }
 
-#search-btn{
-    color:white;
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#home{
-    margin-left: 20px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
-body{
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Body and Background */
+body {
     background-image: url('../Image/Explore\ 1.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-#title{
-    margin: 200px 20px 20px 800px;
-}
-
-#sanventure{
-    color:darkred;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-shadow: 1.3px 1.3px ;
-}
-
-#seven{
-    margin: 400px 75px 0px 700px;
+/* Title and Subtitle */
+#title {
     text-align: center;
+    margin: 150px auto 75px auto;
+    font-size: 3rem;
+}
+
+#sanventure {
+    color: darkred;
     font-family: sans-serif;
     font-weight: bold;
-    color:rgb(0, 225, 255);
-    text-shadow: 1px 1px;
-    font-size: 40px;
-    position: absolute;
-    overflow: hidden;
+    text-shadow: 1.3px 1.3px;
 }
 
-#img-global{
-    height: 500px;
-    width: 1200px;
-    margin-left: 20px;
-    margin: 350px 20px 20px 75px;
+/* Image Section Styling */
+#img-global, #img-wonder {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
-#global-button{
-    margin: 510px 0px 0px 0px;
-    position: absolute;
-    left: 65%;
-    border-radius: 20px;
-    width: 120px;
-    height: 35px;
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255);
-    font-weight: bold;
+/* Card Container */
+#global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#global h2 {
     text-align: center;
+    color: rgb(0, 225, 255);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-#global-button:hover{
-    background-color: rgba(255, 0, 212, 0.678);
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1200px;
 }
 
-#img-wonder{
-    height: 500px;
-    width: 1200px;
-    float: left;
-    margin-left: 20px;
-    margin: 0px 20px 20px 75px;
-    overflow: hidden;
+/* Card Styling */
+.card {
+    background-color: rgba(207, 200, 200, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    height:auto;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
 }
 
-#wonder{
-    margin: 750px 20px 20px 700px;
-    position: absolute;
-    font-family: sans-serif;
-    font-weight: bold;
-    color:crimson;
-    text-shadow: 1px 1px;
-    font-size: 40px;
-    position: absolute;
-    overflow: hidden;
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
 
-
-
-#wonder-seven{
-    margin: 200px 0px 0px 0px;
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
 }
 
-#footer1{
-    background-color:wheat;
-    margin: 50px 0px 0px 0px;
-    height: 50px;
+.card button{
+    color: white;
+    background-color: darkred;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+#footer1 {
+    background-color: wheat;
     padding: 10px;
+    text-align: center;
 }
 
-#devloper{
-    margin: 0px 0px 0px 300px;
-  }
-  
-  #sandesh{
-      color: crimson;
-      margin: 0px 0px 0px 5px;
-      font-weight: bold;
-  }
+#devloper {
+    display: inline;
+}
+
+#sandesh {
+    color: crimson;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    #title {
+        font-size: 1.8rem;
+        margin: 80px 20px 20px 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-global, #img-wonder {
+        width: 90%;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #title {
+        font-size: 1.5rem;
+        margin: 50px 10px 10px 10px;
+    }
+
+    #sanventure {
+        font-size: 1.2rem;
+    }
+
+    #footer1 p {
+        font-size: 0.9rem;
+    }
+}
